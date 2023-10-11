@@ -35,4 +35,6 @@ D_FF_neg reg3(.D(mem[3]),.RSTb(reset),.CLKb(debouncedCLK),.Q(S[3]));
 //seven_seg stateOutput(.A(S), .S(hex1));
 outputLogic OL(.S(S), .hexState(hex1), .item(item), .hChange(hChange), .qChange(fChange));
 
+seven_seg_change change(.A(S), .S(hex2));
+
 endmodule
